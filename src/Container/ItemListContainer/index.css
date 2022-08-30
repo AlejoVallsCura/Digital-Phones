@@ -1,0 +1,20 @@
+.greeting{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+h1{
+   
+    padding: 10px 23px;
+    background-color: rgb(94, 162, 218);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+h1:hover{
+    background-color: #24252A;
+}
+
