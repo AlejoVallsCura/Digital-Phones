@@ -1,0 +1,10 @@
+.cantidad{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.cantidad h2{
+    margin: 3px;
+}
