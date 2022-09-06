@@ -14,7 +14,7 @@ const NavBar = () => {
                 <li><a href="#">Nosotros</a></li>
             </ul>
         </nav>
-        <a className="cta" href="#"><button> Contactame!</button> </a>
+        <a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a>
         </div>
     </header>
   )

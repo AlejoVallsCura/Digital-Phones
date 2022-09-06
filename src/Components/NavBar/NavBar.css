@@ -1,7 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .contenedor{
@@ -49,7 +54,7 @@ li, a, button{
     color: rgb(94, 162, 218);
 }
 
-button{
+.BotonContacto{
     padding: 10px 23px;
     background-color: rgb(94, 162, 218);
     border: none;
@@ -58,7 +63,7 @@ button{
     transition: all 0.3s ease 0s;
 }
 
-button:hover{
+.BotonContacto:hover{
     background-color: #24252A;
 }
 

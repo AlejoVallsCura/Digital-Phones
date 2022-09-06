@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
+import {BsFillCartCheckFill} from "react-icons/bs"
 import "./ItemCount.css";
 
 const ItemCount = () => {
@@ -13,17 +14,17 @@ const ItemCount = () => {
         setCount(count-1)
     }
 
-    useEffect(()=>{
-        console.log("Se monto el ItemCount");   
-    }, [])
-
 
     return (
-        <div className="cantidad">
+        <div>
+            <div className="cantidad">
             <button onClick={handleMin}>-</button>
             <h2>{count}</h2>
             <button onClick={handleAdd}>+</button>
+            </div>
+            <button className="addCart"><BsFillCartCheckFill/></button>
         </div>
+       
     );
 };
 

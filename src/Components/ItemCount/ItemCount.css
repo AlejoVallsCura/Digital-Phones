@@ -8,3 +8,22 @@
 .cantidad h2{
     margin: 3px;
 }
+
+button{
+    padding: 5px 10px;
+    background-color: rgb(94, 162, 218);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: #24252A;
+}
+
+.addCart{
+    margin: 10px;
+    width: 80px;
+}
+
