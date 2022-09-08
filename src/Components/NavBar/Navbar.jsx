@@ -12,7 +12,6 @@ const NavBar = () => {
         <img className="logo" src={logo} alt="logo" />
         <nav>
             <ul className="nav__links">
-                
                 <li><a href="#">Tienda</a></li>
                 {/* <li><a href="#"><FaShoppingCart/></a></li> */}
                 <a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './index.css';
-import { products } from '../../data/productos';
 import ItemList from '../../Components/ItemList/ItemList';
 
 const ItemListContainer = () => {
@@ -8,15 +7,12 @@ const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
 
   useEffect(()=> {
+    
     (async ()=> {
-    const obtenerProductos = new Promise ((accept, reject)=> {
-        setTimeout(()=> {
-          accept(products)
-        }, 1000);
-      })
-      
+    
         try {
-          const productos = await obtenerProductos;
+          const response = await fetch("../../data/productos.json");
+          const productos = await response.json();
           setProductos(productos);
         } catch (error) {
           console.log(error);
