@@ -1,5 +1,17 @@
 .cartaItem{
+        background-color: #ffffff;
         margin: 50px;
         text-align: center;
         align-items: center;
+        border: 3px solid rgb(163, 213, 255);
+        border-radius: 10px;
+        transition: all 0.3s;
+}
+.cartaItem:hover{
+        background-color: rgb(199, 230, 255);
+        border: 3px solid rgb(42, 87, 121);
+}
+
+.imagenesProductos{
+        max-height: 200px;
 }

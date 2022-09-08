@@ -7,10 +7,12 @@ const Item = ({product}) => {
     
     <div className='cartaItem'>
         <div className='datosItem'>
-            <p>imagen del celular</p>
-            <h3>{product.description}</h3>
-            <h3>{product.precio}</h3>
-            <ItemCount/>
+
+          <img className='imagenesProductos' src={product.img} alt="" />
+          <h3>{product.description}</h3>
+          <h3>{product.precio}</h3>
+          <ItemCount/>
+
         </div>
     </div>
   )
