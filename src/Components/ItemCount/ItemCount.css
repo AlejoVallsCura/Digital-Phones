@@ -22,6 +22,11 @@ button:hover{
     background-color: #24252A;
 }
 
+.aniadir{
+    display: flex;
+    justify-content: center;
+}
+
 .addCart{
     margin: 10px;
     width: 80px;

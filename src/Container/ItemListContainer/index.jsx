@@ -7,9 +7,7 @@ const ItemListContainer = () => {
   const [productos, setProductos] = useState([])
 
   useEffect(()=> {
-    
     (async ()=> {
-    
         try {
           const response = await fetch("/mocks/productos.json");
           const productos = await response.json();
@@ -17,7 +15,6 @@ const ItemListContainer = () => {
         } catch (error) {
           console.log(error);
         }
-
       })()
 
   }, [])

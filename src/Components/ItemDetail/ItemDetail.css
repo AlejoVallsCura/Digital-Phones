@@ -1,0 +1,14 @@
+.h1Detail{
+    text-align: center;
+}
+.pDetail{
+    text-align: center;
+}
+.divDetail{
+    margin-top: 20px;
+    padding: 0 20% 0 20% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

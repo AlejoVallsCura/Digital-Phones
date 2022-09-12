@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
     useEffect(()=> {
         const getProducts = async () => {
             try {
-                const response = await fetch('../../data/productos.json');
+                const response = await fetch('/mocks/productos.json');
                 const data = await response.json();
                 setProductDetail(data);
             } catch (error) {
@@ -19,7 +19,16 @@ const ItemDetailContainer = () => {
 
     console.log(productDetail);
 
-    return <ItemDetail product={productDetail}/>;
+    return (
+        <>
+        {Object.keys(productDetail).length === 0 ? (
+            <h2> Loading Prodcuts... </h2>
+        ):(
+        <ItemDetail product={productDetail} />
+        )}
+        </>
+    );
 };
+
 
 export default ItemDetailContainer;

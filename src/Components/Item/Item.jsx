@@ -11,8 +11,8 @@ const Item = ({product}) => {
           <img className='imagenesProductos' src={product.img} alt="" />
           <h3>{product.description}</h3>
           <h3>{product.precio}</h3>
+          <button className='verMas'>VER MAS</button>
           <ItemCount/>
-
         </div>
     </div>
   )

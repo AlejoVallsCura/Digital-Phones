@@ -16,13 +16,15 @@ const ItemCount = () => {
 
 
     return (
-        <div>
+        <div className="count">
             <div className="cantidad">
-            <button onClick={handleMin}>-</button>
-            <h2>{count}</h2>
-            <button onClick={handleAdd}>+</button>
+                <button onClick={handleMin}>-</button>
+                <h2>{count}</h2>
+                <button onClick={handleAdd}>+</button>
             </div>
-            <button className="addCart"><BsFillCartCheckFill/></button>
+            <div className="aniadir">
+                <button className="addCart"><BsFillCartCheckFill/></button>
+            </div>
         </div>
        
     );
