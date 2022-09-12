@@ -11,7 +11,7 @@ const ItemListContainer = () => {
     (async ()=> {
     
         try {
-          const response = await fetch("../../data/productos.json");
+          const response = await fetch("/mocks/productos.json");
           const productos = await response.json();
           setProductos(productos);
         } catch (error) {

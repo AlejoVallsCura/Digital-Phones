@@ -1,0 +1,14 @@
+[
+    { "id": "1", "description": "Samsung s22 Ultra", "stock": 10 , "precio": "$ 960", "img": "/assets/galaxy-s22-ultra.png" },
+    { "id": "2", "description": "Iphone 13 Pro Max", "stock": 8 , "precio": "$ 1050", "img": "/assets/iphone-13-pro-max.png" },
+    { "id": "3", "description": "Xiaomi Redmi Note 11", "stock": 4 , "precio": "$ 730", "img": "/assets/Redmi-Note-11.png" },
+    { "id": "4", "description": "Samsung Galaxy S20", "stock": 15, "precio": "$ 660", "img": "/assets/SamsungGalaxyS20.png"  },
+    { "id": "5", "description": "Motorola Edge 30", "stock": 21 , "precio": "$ 940", "img": "/assets/MotoEdge.png" },
+    { "id": "6", "description": "Google Pixel 6", "stock": 5 , "precio": "$ 580", "img": "/assets/googlePixel6.png" },
+    { "id": "7", "description": "Realme GT 2 Pro" , "stock": 8, "precio": "$ 715", "img": "/assets/Realme-GT-2-Pro.png"},
+    { "id": "8", "description": "ASUS Zenfone 9" , "stock": 13, "precio": "$ 420", "img":"/assets/AsusZenfone.png" },
+    { "id": "9", "description": "Vivo X80 Pro" , "stock": 25, "precio": "$ 590", "img": "/assets/vivo.png"},
+    { "id": "10", "description": "Xiaomi 12 Pro" , "stock": 30, "precio": "$ 780", "img": "/assets/xiaomi-12-pro.png"},
+    { "id": "11", "description": "Samsung Galaxy Z Fold4" , "stock": 16, "precio": "$ 1130", "img": "/assets/fold4.png"},
+    { "id": "12", "description": "POCO F4 GT" , "stock": 3, "precio": "$ 800", "img": "/assets/xiaomi_poco_f4.png"}
+]
