@@ -1,6 +1,7 @@
 import React from 'react'
 import ItemCount from "../ItemCount/ItemCount"
 import "./Item.css"
+import {Link} from 'react-router-dom';
 
 const Item = ({product}) => {
   return (
@@ -9,9 +10,9 @@ const Item = ({product}) => {
         <div className='datosItem'>
 
           <img className='imagenesProductos' src={product.img} alt="" />
-          <h3>{product.description}</h3>
+          <h3>{product.name}</h3>
           <h3>{product.precio}</h3>
-          <button className='verMas'>VER MAS</button>
+          <Link to="/Detalle" ><button className='verMas'>VER MAS</button></Link>
           <ItemCount/>
         </div>
     </div>
