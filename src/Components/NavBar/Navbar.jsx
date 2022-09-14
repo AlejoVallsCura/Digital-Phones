@@ -19,8 +19,8 @@ const NavBar = () => {
                 <li>
                 <Link to="/Tienda">Tienda</Link>
                 </li>
-                {/* <li><a href="#"><FaShoppingCart/></a></li> */}
-                {/* <li><a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a></li> */}
+                <li><a href="#"><FaShoppingCart/></a></li>
+                <li><a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a></li>
             </ul>
         </nav>
         </div>

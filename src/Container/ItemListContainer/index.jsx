@@ -10,18 +10,8 @@ const ItemListContainer = () => {
   const {categoryId} = useParams();
   console.log(categoryId);
 
-  // useEffect(()=> {
-  //   (async ()=> {
-  //       try {
-  //         const response = await fetch("/mocks/productos.json");
-  //         const productos = await response.json();
-  //         setProductos(productos);
-  //       } catch (error) {
-  //         console.log(error);
-  //       }
-  //     })()
+  useEffect(()=> {
 
-  // }, [categoryId])
 
   (async () => {
     try {
@@ -42,7 +32,8 @@ const ItemListContainer = () => {
     } catch (error) {
         console.log(error);
     }
-})();
+}) ()
+  },[categoryId]);
 
   return (
     <div className='item-list-container'>

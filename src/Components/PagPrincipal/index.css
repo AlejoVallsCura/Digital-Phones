@@ -1,0 +1,11 @@
+h1{
+    text-align: center;
+    margin: 30px;
+}
+.divPrincipal{
+    height: 100vh;
+    background-image: url("/public/assets/bgDigital.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
