@@ -19,7 +19,7 @@ function App() {
       <Routes>
         
         <Route path="/Tienda" element={<ItemListContainer/>}/>
-        <Route path="/Detalle" element={<ItemDetailContainer/>}/>
+        <Route path="/Detalle/:id" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<NotFound/>}/>
         <Route path="/" element={<PagPrincipal/>}/>
 
