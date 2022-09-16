@@ -17,7 +17,7 @@ function App() {
       <Navbar />      
       <Routes>
         <Route path="/Tienda" element={<ItemListContainer/>}/>
-        <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/detalle/:productId" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<NotFound/>}/>
         <Route path="/" element={<PagPrincipal/>}/>
       </Routes>

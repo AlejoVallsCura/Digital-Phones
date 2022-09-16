@@ -3,6 +3,7 @@ import ItemDetail from "../../Components/ItemDetail/ItemDetail";
 import {useParams} from 'react-router-dom';
 
 const ItemDetailContainer = () => {
+
     const [productDetail, setProductDetail] = useState({})
 
     const {productId} = useParams();
@@ -12,8 +13,9 @@ const ItemDetailContainer = () => {
             try {
                 const response = await fetch("/mocks/productos.json");
                 const data = await response.json();
-                const result = data.filter(product => product.id === productId);
+                const result = data.find(product => product.id === productId);
                 setProductDetail(result);
+
             } catch (error) {
                 console.log(error);
             }

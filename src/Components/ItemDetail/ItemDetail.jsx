@@ -6,9 +6,9 @@ const ItemDetail = ({product}) => {
   return (
     <div>
       <div className='divDetail'>
-        <h1 className='h1Detail'>{product[0].name}</h1>
-        <img className='imgDetail' src={product[0].img}/>
-        <p className='pDetail'>{product[0].description}</p>
+        <h1 className='h1Detail'>{product.name}</h1>
+        <img className='imgDetail' src={product.img}/>
+        <p className='pDetail'>{product.description}</p>
         <ItemCount/>
       </div>
     </div>

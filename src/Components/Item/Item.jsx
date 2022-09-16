@@ -17,7 +17,7 @@ const Item = ({product}) => {
           <h3>{product.name}</h3>
           <h3>{product.precio}</h3>
           <button onClick={handleNavigate} className='verMas'>VER MAS</button>
-          <ItemCount/>
+          
         </div>
     </div>
   )
