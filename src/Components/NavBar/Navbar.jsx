@@ -14,13 +14,17 @@ const NavBar = () => {
         <nav>
             <ul className="nav__links">
                 <li>
-                <Link to="/">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                <Link to="/Tienda">Tienda</Link>
+                  <Link to="/Tienda">Tienda</Link>
                 </li>
-                <li><a href="#"><FaShoppingCart/></a></li>
-                <li><a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a></li>
+                <li>
+                  <a href="#"><FaShoppingCart/></a>
+                </li>
+                <li>
+                  <a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a>
+                </li>
             </ul>
         </nav>
         </div>

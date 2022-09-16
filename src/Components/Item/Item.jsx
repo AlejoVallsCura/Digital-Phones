@@ -1,9 +1,13 @@
 import React from 'react'
 import ItemCount from "../ItemCount/ItemCount"
 import "./Item.css"
-import {Link} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 const Item = ({product}) => {
+  const navigate = useNavigate ()
+  const handleNavigate = () => {
+    navigate(`/detalle/${product.id}`)
+  }
   return (
     
     <div className='cartaItem'>
@@ -12,7 +16,7 @@ const Item = ({product}) => {
           <img className='imagenesProductos' src={product.img} alt="" />
           <h3>{product.name}</h3>
           <h3>{product.precio}</h3>
-          <Link to="/Detalle/:id" ><button className='verMas'>VER MAS</button></Link>
+          <button onClick={handleNavigate} className='verMas'>VER MAS</button>
           <ItemCount/>
         </div>
     </div>

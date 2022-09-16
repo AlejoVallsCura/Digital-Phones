@@ -6,23 +6,19 @@ const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState({})
 
     const {productId} = useParams();
-    console.log(productId);
-    
+
     useEffect(()=> {
-        const getProducts = async () => {
+        (async () => {
             try {
-                const response = await fetch(`/mocks/productos.json`);
+                const response = await fetch("/mocks/productos.json");
                 const data = await response.json();
-                const result = data.filter(data => data.id === productId);
+                const result = data.filter(product => product.id === productId);
                 setProductDetail(result);
             } catch (error) {
                 console.log(error);
             }
-        }
-        getProducts();
+        }) ()
     }, [productId])
-
-    console.log(productDetail);
 
     return (
         <>

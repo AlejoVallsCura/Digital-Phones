@@ -12,20 +12,17 @@ import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
-    <>
     
     <BrowserRouter>
       <Navbar />      
       <Routes>
-        
         <Route path="/Tienda" element={<ItemListContainer/>}/>
-        <Route path="/Detalle/:id" element={<ItemDetailContainer/>}/>
+        <Route path="/detalle/:id" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<NotFound/>}/>
         <Route path="/" element={<PagPrincipal/>}/>
-
       </Routes>
     </BrowserRouter>
-    </>
+   
   );
 }
 
