@@ -14,7 +14,8 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   const handleDecrement = () => {
-    //Desarrollo del decrement
+    if (count <= 0) return     
+    setCount(count - 1);
   };
 
   const addCart = () => {
