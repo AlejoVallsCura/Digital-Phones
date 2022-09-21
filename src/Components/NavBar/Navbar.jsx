@@ -10,7 +10,7 @@ const NavBar = () => {
     <header className="contenedor">
         <div className="contenedorNav">
           <div className="contenedorPeque">
-        <img className="logo" src={logo} alt="logo" />
+        <Link to="/" > <img className="logo" src={logo} alt="logo" /> </Link>
         <nav>
             <ul className="nav__links">
                 <li>
