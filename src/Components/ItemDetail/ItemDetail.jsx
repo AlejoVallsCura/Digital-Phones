@@ -8,15 +8,15 @@ const ItemDetail = ({ product }) => {
   const [qty, setQty] = useState(0);
   const navigate = useNavigate();
 
-  const {addItem} = useContext(Shop);
+  const { addItem } = useContext(Shop);
 
   const addCart = (quantity) => {
     setQty(quantity);
   };
 
   const handleFinish = () => {
-    const productToSave = {...product, quantity:qty}
-    addItem(productToSave)
+    const productToSave = { ...product, quantity: qty };
+    addItem(productToSave);
     navigate("/cart");
   };
 
