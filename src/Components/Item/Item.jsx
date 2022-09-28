@@ -1,9 +1,9 @@
-import React from 'react'
-import ItemCount from "../ItemCount/ItemCount"
 import "./Item.css"
+import React, {useContext} from 'react'
 import {useNavigate} from 'react-router-dom';
-
+ 
 const Item = ({product}) => {
+  
   const navigate = useNavigate ()
   const handleNavigate = () => {
     navigate(`/detalle/${product.id}`)

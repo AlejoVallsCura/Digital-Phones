@@ -3,7 +3,7 @@
         "description": "Nueva apariencia digna de un Note. Conocé el Galaxy S22 Ultra, con el poder de Note. El marco pulido, delgado y audaz, rodea la forma extruida para lograr una simetría elegante. Y la cámara lineal, acentuada por anillos de lentes espejados, parece flotar en su lugar.",
         "name": "Samsung s22 Ultra",
         "stock": 10,
-        "precio": "$ 960",
+        "precio": 960,
         "img": "/assets/galaxy-s22-ultra.png"
     },
     {
@@ -11,7 +11,7 @@
         "description": "La pantalla del iPhone 13 Pro Max tiene esquinas redondeadas que siguen el elegante diseño curvo del teléfono, y las esquinas se encuentran dentro de un rectángulo estándar. Si se mide en forma de rectángulo estándar, la pantalla tiene 6.68 pulgadas en diagonal (el área real de visualización es menor).",
         "name": "Iphone 13 Pro Max",
         "stock": 8,
-        "precio": "$ 1050",
+        "precio": 1050,
         "img": "/assets/iphone-13-pro-max.png"
     },
     {
@@ -19,7 +19,7 @@
         "description": "El Xiaomi Redmi Note 11 es uno de los teléfonos que suena como candidato al rey de la calidad-precio en 2022. Su diseño es llamativo, sus especificaciones pueden resultar suficientes, pero si por algo puede resultar atractivo este teléfono es por su precio más asequible. En Xataka, llevamos una semana utilizando uno de los teléfonos más importantes para la gama media de este año, y en este análisis vamos a contaros nuestra experiencia con él. ",
         "name": "Xiaomi Redmi Note 11",
         "stock": 4,
-        "precio": "$ 730",
+        "precio": 730,
         "img": "/assets/Redmi-Note-11.png"
     },
     {
@@ -27,7 +27,7 @@
         "description": "Samsung Galaxy S20 5G es un smartphone de 2020. Su tamaño es 151.7 x 69.1 x 7.9 mm y su peso es 163 pulgadas. Tiene ina pantalla Dynamic AMOLED 2X de 6.2. La resolución es de 1440 x 3200 y una densidad de los píxeles de 563 ppi . La cámara frontera singular de 10 MP. ",
         "name": "Samsung Galaxy S20",
         "stock": 15,
-        "precio": "$ 660",
+        "precio": 660,
         "img": "/assets/SamsungGalaxyS20.png"
     },
     {
@@ -35,7 +35,7 @@
         "description": "Motorola Edge 30 es un smartphone de 2022. Su tamaño es 159.4 x 74.2 x 6.8 mm y su peso es 155 pulgadas. Tiene ina pantalla AMOLED de 6.5. La resolución es de 1080 x 2400 y una densidad de los píxeles de 405 ppi . La cámara frontera singular de 32 MP. La cámara trasera triple de 50 MP. ",
         "name": "Motorola Edge 30",
         "stock": 21,
-        "precio": "$ 940",
+        "precio": 940,
         "img": "/assets/MotoEdge.png"
     },
     {
@@ -43,7 +43,7 @@
         "description": "Google Pixel 6 es un smartphone de 2021. Su tamaño es 158.6 x 74.8 x 8.9 mm y su peso es 207 pulgadas. Tiene ina pantalla AMOLED de 6.4. La resolución es de 1080 x 2400 y una densidad de los píxeles de 411 ppi . La cámara frontera singular de 12 MP. ",
         "name": "Google Pixel 6",
         "stock": 5,
-        "precio": "$ 580",
+        "precio": 580,
         "img": "/assets/googlePixel6.png"
     },
     {
@@ -51,7 +51,7 @@
         "description": "Realme GT2 Pro fotos Realme GT2 Pro fotos Realme GT2 Pro fotos Realme GT2 Pro fotos, Realme GT2 Pro es un smartphone de 2022. Su tamaño es 163.2 x 74.7 x 8.2 mm y su peso es 189 pulgadas. Tiene ina pantalla LTPO2 AMOLED de 6.7. La resolución es de 1440 x 3216 y una densidad de los píxeles de 509 ppi . La cámara frontera singular de 32 MP. La cámara trasera triple de 50 MP.",
         "name": "Realme GT 2 Pro",
         "stock": 8,
-        "precio": "$ 715",
+        "precio": 715,
         "img": "/assets/Realme-GT-2-Pro.png"
     },
     {
@@ -59,7 +59,7 @@
         "description": "Un nuevo aspirante al trono de los móviles más contenidos y potentes entra como un elefante en una cacharrería, y eso que es pequeño: el Asus Zenfone 9 es justo el teléfono a recomendar para quien quiera un móvil lo mas manejable posible. Sorprende en todos los ámbitos, incluso donde menos parecía que iba a sorprender.",
         "name": "ASUS Zenfone 9",
         "stock": 13,
-        "precio": "$ 420",
+        "precio": 420,
         "img": "/assets/AsusZenfone.png"
     },
     {
@@ -67,7 +67,7 @@
         "description": "Imagen Profesional de ZEISS: equipado con un sensor GNV de gran sensibilidad de 50 MP, el X80 Pro incorpora óptica ZEISS y todas las lentes cumplen los estándares de revestimiento antirreflejante T* de ZEISS que reduce el reflejo y disminuye la luz parásita para que puedas captar la claridad e intensidad reales de los colores. ",
         "name": "Vivo X80 Pro",
         "stock": 25,
-        "precio": "$ 590",
+        "precio": 590,
         "img": "/assets/vivo.png"
     },
     {
@@ -75,7 +75,7 @@
         "description": "Xiaomi también tiene móviles de más de 1.000 euros. El Xiaomi 12 Pro quiere competir con cualquier gama alta que se le ponga por delante y tiene varias herramientas para plantar cara en el segmento premium. No es el teléfono más caro de Xiaomi a la venta en España, y es que el Xiaomi Mi 11 Ultra sigue ostentando ese puesto. ",
         "name": "Xiaomi 12 Pro",
         "stock": 30,
-        "precio": "$ 780",
+        "precio": 780,
         "img": "/assets/xiaomi-12-pro.png"
     },
     {
@@ -83,7 +83,7 @@
         "description": "El Samsung Galaxy Z Fold 4 es la cuarta generación del primer foldable smartphone de Samsung. El Galaxy Z Fold4 cuenta con una pantalla interna AMOLED de 7.6 pulgadas a resolución FHD+ y tasa de refresco de 120Hz, que esconde una cámara selfie de 4MP. Al estar cerrado, el Galaxy Z Fold 4 cuenta con una pantalla AMOLED de 6.2 pulgadas, también de 120Hz de refresco. ",
         "name": "Samsung Galaxy Z Fold4",
         "stock": 16,
-        "precio": "$ 1130",
+        "precio": 1130,
         "img": "/assets/fold4.png"
     },
     {
@@ -91,7 +91,7 @@
         "description": "POCO quiere ir a por todas este 2022, y el POCO F4 GT es su principal declaración de intenciones. Se trata del primer móvil 'gaming' de la compañía, la versión internacional del Xiaomi Redmi K50 Gaming Edition. Olvida así parte de la esencia de los anteriores POCO de la serie F, que apostaban por precios bajos y especificaciones que rozaban la primera línea.",
         "name": "POCO F4 GT",
         "stock": 3,
-        "precio": "$ 800",
+        "precio": 800,
         "img": "/assets/xiaomi_poco_f4.png"
     }
 ]
