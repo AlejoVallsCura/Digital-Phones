@@ -26,6 +26,7 @@ const ItemDetail = ({ product }) => {
     <div>
       <div className="divDetail">
         <h1 className="h1Detail">{product.name}</h1>
+        <h3 className="pDetail"> ${product.precio}</h3>
         <img className="imgDetail" src={product.img} />
         <p className="pDetail">{product.description}</p>
         {qty ? (

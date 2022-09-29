@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 table, th, td {
@@ -23,3 +22,4 @@ max-width: 130px;
     background-color: rgb(255, 88, 88);
     transition: all 1s ;
 }
+

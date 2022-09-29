@@ -2,6 +2,7 @@ import React from "react";
 import { useCartContext } from "../../Context/ShopProvider";
 import {Link} from 'react-router-dom';
 import ItemCart from "../ItemCart.jsx/ItemCart";
+import "./Cart.css"
 
 const Cart = () => {
   const { cart, totalPrice } = useCartContext();
