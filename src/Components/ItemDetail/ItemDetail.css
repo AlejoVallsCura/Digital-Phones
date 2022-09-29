@@ -4,7 +4,9 @@
 .pDetail{
     text-align: center;
 }
-
+.imgDetail{
+    max-height: 300px;
+}
 .divDetail{
     margin-top: 20px;
     padding: 0 20% 0 20% ;
