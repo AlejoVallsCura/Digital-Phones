@@ -25,7 +25,7 @@ const ItemCart = ({ product }) => {
       <td>
         <button onClick={() => removeItem(product.id)} className="eliminar">Eliminar</button>
       </td>
-      </tr>
+    </tr>
   );
 };
 
