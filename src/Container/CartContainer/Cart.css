@@ -13,3 +13,16 @@ th, tr {
 th{
     width: 150px;
 }
+
+.VaciarCarro{
+    background-color: rgb(251, 97, 97);
+}
+.botonesCierre{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonesCierre button{
+    margin: 10px;
+}
