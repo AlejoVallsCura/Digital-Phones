@@ -25,7 +25,7 @@
 // export default CartContainer;
 
 import React, { useContext, useState } from "react";
-import { CartContext } from "../../Context/ShopProvider";
+import { useCartContext } from "../../Context/ShopProvider";
 import ordenGenerada from "../../Services/generarOrden";
 import Carro from "../../Components/Cart/Cart";
 import "./Cart.css";
@@ -35,13 +35,13 @@ import { doc, updateDoc, getDoc } from "firebase/firestore";
 import { db } from "../../Firebase/config";
 
 const Cart = () => {
-    const { cart, clearCart, total } = useContext(CartContext);
+    const { cart, clearCart, totalPrice } = useCartContext();
     const [loading, setLoading] = useState(false);
 
 
     const handleBuy = async () => {
         setLoading(true)
-        const importeTotal = total();
+        const importeTotal = totalPrice();
         const orden = ordenGenerada(
             "Sebastián",
             "sebas@live.com",

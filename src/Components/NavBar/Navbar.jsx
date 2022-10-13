@@ -20,7 +20,7 @@ const NavBar = () => {
                   <Link to="/Tienda">Tienda</Link>
                 </li>
                 <li>
-                  <a href="#"><FaShoppingCart/></a>
+                  <Link to="/cart"><FaShoppingCart/></Link>
                 </li>
                 <li>
                   <a className="cta" href="#"><button className="BotonContacto"> Contactame!</button> </a>
