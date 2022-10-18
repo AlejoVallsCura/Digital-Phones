@@ -20,7 +20,7 @@ const ItemDetail = ({ product }) => {
     navigate("/cart");
   };
 
-  console.log(qty);
+  // console.log(qty);
 
   return (
     <div>

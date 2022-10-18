@@ -50,7 +50,7 @@ const Cart = () => {
       cart,
       importeTotal
     );
-    console.log(orden);
+    // console.log(orden);
 
     const docRef = await addDoc(collection(db, "orders"), orden);
 

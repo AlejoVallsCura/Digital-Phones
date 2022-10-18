@@ -24,11 +24,11 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   };
 
   useEffect(() => {
-    console.log("Se creo el ItemCount");
+    // console.log("Se creo el ItemCount");
   }, []);
 
   useEffect(() => {
-    console.log("Se actualiza el estado");
+    // console.log("Se actualiza el estado");
   }, [count]);
 
   return (

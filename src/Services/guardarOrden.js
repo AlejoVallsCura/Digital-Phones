@@ -2,7 +2,7 @@ import { addDoc, collection, doc, getDoc, writeBatch } from "firebase/firestore"
 import { db } from "../firebase/config"
 
 const guardarOrden = (cart, orden) => {
-    console.log("Guardar orden");
+    // console.log("Guardar orden");
     
     //Primer paso: abrir un batch
     const batch = writeBatch(db)
@@ -26,8 +26,8 @@ const guardarOrden = (cart, orden) => {
                 outOfStock.push(producto)
             }
             
-            console.log("Productos fuera de stock:");
-            console.log(outOfStock);
+            // console.log("Productos fuera de stock:");
+            // console.log(outOfStock);
     
             if (outOfStock.length === 0) {
                 addDoc(collection(db, 'orders'), orden).then(({ id }) => {
@@ -36,7 +36,7 @@ const guardarOrden = (cart, orden) => {
                         alert("Se genero la order con id: " + id)
                     })
                 }).catch((err) => {
-                    console.log(`Error: ${err.message}`);
+                    // console.log(`Error: ${err.message}`);
                 })
             //Si tenemos productos fuera de stock al momento de generar la order avisamos al usuario
             } else {

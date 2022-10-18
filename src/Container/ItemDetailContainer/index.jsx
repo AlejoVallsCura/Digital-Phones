@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
   const [productDetail, setProductDetail] = useState({});
 
   const { productId } = useParams();
-  console.log(productId);
+  // console.log(productId);
 
   useEffect(()=> {
     const getProducts = async () => {
@@ -20,10 +20,10 @@ const ItemDetailContainer = () => {
         if (docSnap.exists()) {
           setProductDetail({ id: docSnap.id, ...docSnap.data() });
         } else {
-          console.log("No such document!");
+          // console.log("No such document!");
         }
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
 
     }

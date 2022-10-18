@@ -8,13 +8,13 @@ import { db } from "../../Firebase/config";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
 const ItemListContainer = () => {
-  console.log(db);
+//   console.log(db);
 
   const [productos, setProductos] = useState([]);
 
   const { categoryId } = useParams();
 
-  console.log(categoryId);
+//   console.log(categoryId);
 
   useEffect(() => {
       (async () => {
@@ -32,11 +32,11 @@ const ItemListContainer = () => {
               querySnapshot.forEach((doc) => {
                   productosFirebase.push({ id: doc.id, ...doc.data() });
               });
-              console.log(productosFirebase);
+            //   console.log(productosFirebase);
               setProductos(productosFirebase);
 
           } catch (error) {
-              console.log(error);
+            //   console.log(error);
           }
       })();
   }, [categoryId]);
