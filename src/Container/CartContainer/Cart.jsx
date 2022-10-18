@@ -1,34 +1,11 @@
-// import React from "react";
-// import Cart from "../../Components/Cart/Cart";
-// import {Link} from 'react-router-dom';
-// import "./Cart.css";
-
-// const CartContainer = () => {
-//   return (
-//     <div className="ItemCart">
-//       <table>
-//         <tr>
-//           <th>Imagen</th>
-//           <th>Nombre</th>
-//           <th>Cantidad</th>
-//           <th>Precio</th>
-//           <th>Subtotal</th>
-//           <th>Eliminar</th>
-//         </tr>
-//         <Cart />
-//       </table>
-//     </div>
-//   );
-// };
-
-// export default CartContainer;
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { useCartContext } from "../../Context/ShopProvider";
 import ordenGenerada from "../../Services/generarOrden";
 import Carro from "../../Components/Cart/Cart";
 import "./Cart.css";
+
+import Swal from "sweetalert2";
 
 import { collection, addDoc } from "firebase/firestore";
 import { doc, updateDoc, getDoc } from "firebase/firestore";
@@ -37,37 +14,66 @@ import { db } from "../../Firebase/config";
 const Cart = () => {
   const { cart, clearCart, totalPrice } = useCartContext();
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-  
-  const handleBuy = async () => {
+  const handleBuy = () => {
     setLoading(true);
-    const importeTotal = totalPrice();
-    clearCart();
-    const orden = ordenGenerada(
-      "Alejo",
-      "alejo@live.com",
-      11111111111,
-      cart,
-      importeTotal
-    );
-    // console.log(orden);
+    const total = totalPrice;
 
-    const docRef = await addDoc(collection(db, "orders"), orden);
+    Swal.fire({
+      title: "Termina tu compra!",
+      html: ` 
+        <input type="text" id="login" class="swal2-input" placeholder="Nombre">
+        <input type="tel" id="tel" class="swal2-input" placeholder="Telefono">
+        <input type="email" id="email" class="swal2-input" placeholder="Email">
+        `,
+      confirmButtonText: 'Enviar',
+      focusConfirm: false,
+      preConfirm: () => {
+        const login = Swal.getPopup().querySelector('#login').value;
+        const email = Swal.getPopup().querySelector('#email').value; 
+        const tel = Swal.getPopup().querySelector('#tel').value;
+        const regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$/;
+        const regexEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/; 
+        const regexTel = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
+        if (!login || !email || !tel) Swal.showValidationMessage(`Completa todos los casilleros`);
+        if (!regexName.test(login)) Swal.showValidationMessage(`Ingrese un nombre valido`);
+        if (!regexEmail.test(email)) Swal.showValidationMessage(`Ingrese un email valido`);
+        if (!regexTel.test(tel)) Swal.showValidationMessage(`Ingrese un telefono valido`);
+          
+       
+        return { login: login, email: email, tel: tel}
+      },
+    }).then((result) => {
+      const order = ordenGenerada(
+        result.value.login,
+        result.value.email,
+        result.value.tel,
+        cart,
+        total
+      );
 
-    cart.forEach(async (productoEnCarrito) => {
-      const productRef = doc(db, "products", productoEnCarrito.id);
-      const productSnap = await getDoc(productRef);
-      await updateDoc(productRef, {
-        stock: productSnap.data().stock - productoEnCarrito.quantity,
+      const docRef = addDoc(collection(db, "orders"), order);
+      
+      cart.forEach(async (productOnCart) => {
+        const productRef = doc(db, "products", productOnCart.id);
+        const productSnap = await getDoc(productRef);
+        await updateDoc(productRef, {
+          stock: productSnap.data().stock - productOnCart.quantity,
+        });
+        console.log(docRef);
       });
-    });
-    setLoading(false);
-    alert(
-      `Gracias por su compra! Se generó la orden generada con ID: ${docRef.id}`
-    );
-    navigate("/Tienda");
+      setLoading(false);
+      clearCart()
+      Swal.fire(`
+        Name: ${result.value.login}
+        Email: ${result.value.email}
+        Phone: ${result.value.tel}
+      `.trim())
+    }).catch(e => {
+      Swal.fire('Error', e)
+      setLoading(false);
+    })
+    
   };
-
 
 
 
@@ -88,15 +94,16 @@ const Cart = () => {
         <>
           <div className="ItemCart">
             <table>
+              <tbody>
               <tr>
                 <th>Imagen</th>
                 <th>Nombre</th>
                 <th>Cantidad</th>
                 <th>Precio</th>
-                <th>Subtotal</th>
                 <th>Eliminar</th>
               </tr>
-              <Carro />
+              <Carro/>
+              </tbody>
             </table>
           </div>
           <div className="botonesCierre">

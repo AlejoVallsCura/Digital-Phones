@@ -30,7 +30,7 @@ const ItemDetail = ({ product }) => {
         <img className="imgDetail" src={product.img} />
         <p className="pDetail">{product.description}</p>
         {qty ? (
-          <button onClick={handleFinish}>Finalizar compra</button>
+          <button onClick={handleFinish} className="Finalizar" >Finalizar compra</button>
         ) : (
           <ItemCount stock={product.stock} initial={0} onAdd={addCart} />
         )}
