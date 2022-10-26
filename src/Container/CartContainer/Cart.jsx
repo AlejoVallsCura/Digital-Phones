@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { useCartContext } from "../../Context/ShopProvider";
 import ordenGenerada from "../../Services/generarOrden";
 import Carro from "../../Components/Cart/Cart";
@@ -14,6 +14,8 @@ import { db } from "../../Firebase/config";
 const Cart = () => {
   const { cart, clearCart, totalPrice } = useCartContext();
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
   const handleBuy = () => {
     setLoading(true);
     const total = totalPrice;
@@ -47,8 +49,7 @@ const Cart = () => {
         result.value.login,
         result.value.email,
         result.value.tel,
-        cart,
-        total
+        cart
       );
 
       const docRef = addDoc(collection(db, "orders"), order);
@@ -64,18 +65,17 @@ const Cart = () => {
       setLoading(false);
       clearCart()
       Swal.fire(`
-        Name: ${result.value.login}
+        Nombre: ${result.value.login}
         Email: ${result.value.email}
-        Phone: ${result.value.tel}
+        Telefono: ${result.value.tel}
       `.trim())
+      navigate("/");
     }).catch(e => {
       Swal.fire('Error', e)
       setLoading(false);
     })
     
   };
-
-
 
   return (
     <div>

@@ -1,14 +1,13 @@
 //Función auxiliar para generar la orden.
-const ordenGenerada = (nombre, email, telefono, cart, total) => {
+const ordenGenerada = (login, email, tel, cart) => {
     return {
         buyer: {
-            nombre: nombre,
+            nombre: login,
             email: email,
-            telefono: telefono,
+            telefono: tel,
         },
         items: cart
         ,
-        total: total,
         createdAt: new Date().toLocaleString()
     }
 }
